@@ -1,0 +1,20 @@
+/*
+* @页面重置通用css
+*/
+html,body{ height: 100%; font-size: 20px; line-height: 1; padding:0; margin:0;}
+p,h1,h2,h3,h4,h5,h6,ul,li{padding:0;margin:0;}
+ul,dl{list-style: none;}
+i,em{font-style:normal;}
+[v-cloak]{ display: none!important;  }
+img { display:block; width: 100%; }
+.pr{position:relative;}
+.pa{position:absolute;}
+.pf{position:fixed;}
+.clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height: 0;font-size: 0;height: 0}
+.clearfix{zoom:1}
+.none{display:none;}
+.fl{float: left;}
+.fr{float: right;}
+.tc{text-align: center;}
+.tl{text-align: left;}
+.tr{text-align: right;}

@@ -1,0 +1,37 @@
+@import './base.scss';
+
+
+/* 自定义字体元素 */
+@font-face {
+    font-family: 'MFYueHei';
+    src: url(../../../../images/qiuqiu/ingameact/brl/fonts/MFYueHei.ttf) format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/; /* iOS 4.1- */
+}
+
+//rem自动换算方法
+@function rem-calc( $size ){
+    $remValues: ($size / 2 / 20) + rem;
+    @return $remValues;
+}
+
+
+// 不显示文字
+@mixin nt(){
+	text-indent: -999em;
+	overflow: hidden;
+}
+
+
+// 单行文字不换行缩写
+@mixin ellipsis() {
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+}
+
+
+// 背景
+@mixin bg( $bg: '', $size: cover ){
+	background-image: url($bg);
+	background-size: $size;
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>球球大作战</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<script>
+	        var __cdn_img_m__ = "../../Public/images/qiuqiu";
+		</script>
+</head>
+<body>
+	
+
+	<a href="javascript:;" class="btn_close_app" id="btn_close_webview">关闭Webview</a>
+	
+	<!-- lottery { -->
+	<section class="lottery">
+		<!-- 转盘头信息 { -->
+		<div class="hd">
+			<a href="javascript:;" class="btn_shop" id="btn_shop">碎片商店</a>
+			<h1 class="title">幸运大转盘</h1>
+			<div class="mushroom_info">
+				<em class="num" id="myMushroom">0</em>
+				<i class="icon"></i>
+			</div>
+		</div>
+		<!-- } 转盘头信息 -->
+		
+		<!-- list { -->
+		<div class="bd" id="award">
+			<div class="item" data-id="1024" data-img="pj_117" data-name="钛金矿石" data-num="2" data-remark="获得途径：幸运大转盘有几率获得" data-describe="幸运大转盘活动开启时间内，可在碎片商店中兑换指定道具">
+				<p class="img"><img src="../../Public/images/qiuqiu/ingameact/brl/award/pj_117.png" alt=""></p>
+				<p class="name">钛金矿石</p>
+				<p class="mask"></p>
+			</div>
+			<div class="item" data-id="260060" data-img="dazhuanpan_4" data-name="钛金材料箱" data-num="2" data-remark="获得途径：幸运大转盘有几率获得" data-describe="游戏中，重量达到5000千克显示特效">
+				<p class="img"><img src="../../Public/images/qiuqiu/ingameact/brl/award/dazhuanpan_4.png" alt=""></p>
+				<p class="name">钛金材料箱</p>
+				<p class="mask"></p>
+			</div>
+			<div class="item" data-id="1010" data-img="hb_3_1" data-name="金蘑菇" data-num="58" data-remark="获得途径：赢得生存模式比赛有几率获得" data-describe="一种生长在云梯上的蘑菇，极为稀有，可以用来加速奇妙宝箱的开启">
+				<p class="img"><img src="../../Public/images/qiuqiu/ingameact/brl/award/hb_3_1.png" alt=""></p>
+				<p class="name">金蘑菇</p>
+				<p class="mask"></p>
+			</div>
+			<div class="item s2" data-id="2801" data-img="B359" data-name="机械神龙" data-num="1" data-remark="光环预览" data-describe="游戏中，重量达到5000千克显示特效" data-type="2" data-cost="2200">
+				<p class="img"><img src="../../Public/images/qiuqiu/ingameact/brl/award/B359.png" alt=""></p>
+				<p class="name">机械神龙</p>
+				<p class="mask"></p>
+			</div>
+			<div class="item" data-id="1024" data-img="pj_117" data-name="钛金矿石" data-num="5" data-remark="获得途径：幸运大转盘有几率获得" data-describe="幸运大转盘活动开启时间内，可在碎片商店中兑换指定道具">
+				<p class="img"><img src="../../Public/images/qiuqiu/ingameact/brl/award/pj_117.png" alt=""></p>
+				<p class="name">钛金矿石</p>
+				<p class="mask"></p>
+			</div>
+			<div class="item" data-id="251002" data-img="dazhuanpan_3" data-name="奇妙宝箱钥匙" data-num="1" data-remark="获得途径：幸运大转盘有几率获得" data-describe="可免费开启一次超大奇妙宝箱">
+				<p class="img"><img src="../../Public/images/qiuqiu/ingameact/brl/award/dazhuanpan_3.png" alt=""></p>
+				<p class="name">奇妙宝箱钥匙</p>
+				<p class="mask"></p>
+			</div>
+			<div class="item" data-id="260060" data-img="dazhuanpan_4" data-name="钛金材料箱" data-num="10" data-remark="获得途径：幸运大转盘有几率获得" data-describe="游戏中，重量达到5000千克显示特效">
+				<p class="img"><img src="../../Public/images/qiuqiu/ingameact/brl/award/dazhuanpan_4.png" alt=""></p>
+				<p class="name">钛金材料箱</p>
+				<p class="mask"></p>
+			</div>
+			<div class="item s2" data-id="3801" data-img="bz_xjsf17" data-name="机械傀儡" data-num="1" data-remark="光环预览" data-describe="游戏中，重量达到5000千克显示特效" data-type="2" data-cost="800">
+				<p class="img"><img src="../../Public/images/qiuqiu/ingameact/brl/award/bz_xjsf17.png" alt=""></p>
+				<p class="name">机械傀儡</p>
+				<p class="mask"></p>
+			</div>
+			<div class="item" data-id="253001" data-img="dazhuanpan_2" data-name="特惠宝箱钥匙S" data-num="1" data-remark="获得途径：幸运大转盘有几率获得" data-describe="可免费开启一次机械傀儡特惠宝箱">
+				<p class="img"><img src="../../Public/images/qiuqiu/ingameact/brl/award/dazhuanpan_2.png" alt=""></p>
+				<p class="name">特惠宝箱钥匙S</p>
+				<p class="mask"></p>
+			</div>
+			<div class="item" data-id="1010" data-img="hb_3_1" data-name="金蘑菇" data-num="38" data-remark="获得途径：赢得生存模式比赛有几率获得" data-describe="一种生长在云梯上的蘑菇，极为稀有，可以用来加速奇妙宝箱的开启">
+				<p class="img"><img src="../../Public/images/qiuqiu/ingameact/brl/award/hb_3_1.png" alt=""></p>
+				<p class="name">金蘑菇</p>
+				<p class="mask"></p>
+			</div>
+			<div class="item" data-id="260060" data-img="dazhuanpan_4" data-name="钛金材料箱" data-num="3" data-remark="获得途径：幸运大转盘有几率获得" data-describe="游戏中，重量达到5000千克显示特效">
+				<p class="img"><img src="../../Public/images/qiuqiu/ingameact/brl/award/dazhuanpan_4.png" alt=""></p>
+				<p class="name">钛金材料箱</p>
+				<p class="mask"></p>
+			</div>
+			<div class="item" data-id="252001" data-img="dazhuanpan_1" data-name="特惠宝箱钥匙A" data-num="1" data-remark="获得途径：幸运大转盘有几率获得" data-describe="可免费开启一次神龙特惠宝箱">
+				<p class="img"><img src="../../Public/images/qiuqiu/ingameact/brl/award/dazhuanpan_1.png" alt=""></p>
+				<p class="name">特惠宝箱钥匙A</p>
+				<p class="mask"></p>
+			</div>
+			<div class="item" data-id="1010" data-img="hb_3_1" data-name="金蘑菇" data-num="66" data-remark="获得途径：赢得生存模式比赛有几率获得" data-describe="一种生长在云梯上的蘑菇，极为稀有，可以用来加速奇妙宝箱的开启">
+				<p class="img"><img src="../../Public/images/qiuqiu/ingameact/brl/award/hb_3_1.png" alt=""></p>
+				<p class="name">金蘑菇</p>
+				<p class="mask"></p>
+			</div>
+			<div class="item" data-id="1014" data-img="hb_1" data-name="棒棒糖" data-num="10" data-remark="获得途径：分享并邀请新玩家、赛季结算可获得" data-describe="厨神哈嗒的杰作，也是波拉哩中最风靡的甜品。在魔法屋里兑换部分光环、孢子和残影会用到，还可以在生存模式兑换入场券。">
+				<p class="img"><img src="../../Public/images/qiuqiu/ingameact/brl/award/hb_1.png" alt=""></p>
+				<p class="name">棒棒糖</p>
+				<p class="mask"></p>
+			</div>
+			
+			<div class="myinfo">
+				<p class="prompt_title">限时 <em>2天</em></p>
+				<p class="prompt_txt">
+					今日限购 <span><em id="todayLotteryNum">0</em>/<em id="totalLotteryNum">1000</em></span>
+				</p>
+				<a href="javascript:;" class="btn_lottery" id="btn_lottery">
+					<em class="btn_txt">点击</em>
+					<span class="s">
+						<em class="num" id="lotteryLimit">45</em>
+						<i class="icon"></i>
+					</span>
+				</a>
+			</div>
+		</div>
+		<!-- } list -->
+	</section>
+	<!-- } lottery -->
+	
+
+	<!-- shop { -->
+	<div class="maskbg none" id="maskbg"></div>
+	<section class="shop none" id="shop">
+		<div class="hd">
+			<h2 class="title">碎片商店</h2>
+			<div class="mychunks">
+				<em class="num" id="myDebris">0</em>
+				<i class="icon"></i>
+			</div>
+			<a href="javascript:;" class="btn_close" id="shop_btn_close">关闭</a>
+		</div>
+
+		<div class="bd">
+			<ul class="shop_list">
+				<li>
+					<div class="shop_item bg1">
+						<p class="name">内容名称七个字</p>
+						<p class="c_num"><em>2000</em></p>
+						<p class="thumb">
+							<img src="http://act.zt2m.ztgame.com/upload/zt2m/images/hanmai/gallery/2017-06/alayu.png" alt="">
+						</p>
+					</div>
+					<a href="javascript:;" class="btn_buy J_btn_shop">
+						<em>100</em>
+						<i class="icon"></i>
+					</a>
+				</li>
+				<li>
+					<div class="shop_item bg2">
+						<p class="name">内容名称七个字</p>
+						<p class="c_num"><em>2000</em></p>
+						<p class="thumb">
+							<img src="http://act.zt2m.ztgame.com/upload/zt2m/images/hanmai/gallery/2017-06/alayu.png" alt="">
+						</p>
+					</div>
+					<a href="javascript:;" class="btn_buy J_btn_shop">
+						<em>200</em>
+						<i class="icon"></i>
+					</a>
+				</li>
+				<li>
+					<div class="shop_item bg3">
+						<p class="name">内容名称七个字</p>
+						<p class="c_num"><em>2000</em></p>
+						<p class="thumb">
+							<img src="http://act.zt2m.ztgame.com/upload/zt2m/images/hanmai/gallery/2017-06/alayu.png" alt="">
+						</p>
+					</div>
+					<a href="javascript:;" class="btn_buy J_btn_shop">
+						<em>300</em>
+						<i class="icon"></i>
+					</a>
+				</li>
+				<li>
+					<div class="shop_item bg4">
+						<p class="name">内容名称七个字</p>
+						<p class="c_num"><em>2000</em></p>
+						<p class="thumb">
+							<img src="http://act.zt2m.ztgame.com/upload/zt2m/images/hanmai/gallery/2017-06/alayu.png" alt="">
+						</p>
+					</div>
+					<a href="javascript:;" class="btn_buy J_btn_shop">
+						<em>400</em>
+						<i class="icon"></i>
+					</a>
+				</li>
+				<li>
+					<div class="shop_item bg5">
+						<p class="name">内容名称七个字</p>
+						<p class="c_num"><em>2000</em></p>
+						<p class="thumb">
+							<img src="http://act.zt2m.ztgame.com/upload/zt2m/images/hanmai/gallery/2017-06/alayu.png" alt="">
+						</p>
+					</div>
+					<a href="javascript:;" class="btn_buy J_btn_shop">
+						<em>500</em>
+						<i class="icon"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</section>	
+	<!-- } shop -->
+
+		
+	<!-- popup { -->
+	<div class="award_detail none animated bounceIn clearfix" id="award_detail1">
+		<p class="img"><img src="" alt=""></p>
+		<div class="detail">
+			<p class="name"></p>
+			<p class="cont"></p>
+		</div>
+		<div class="remark"></div>
+	</div>
+
+	<div class="award_detail2 none animated bounceIn" id="award_detail2">
+		<p class="remark"></p>
+		<div class="img">
+			<img src="" alt="">
+
+			<em class="title">棒棒糖价值</em>
+			<span class="ico">
+				<em class="num">2000</em>
+			</span>
+		</div>
+		<p class="name"></p>
+		<p class="cont"></p>
+	</div>
+
+	<div class="award_success none animated bounceIn" id="award_success">
+		<p class="s_title">恭喜您获得了</p>
+		<p class="s_icon">
+			<img src="" alt="">
+			<em class="name"></em>
+			<i class="num">10</i>
+		</p>
+		<p class="s_note_txt"></p>
+	</div>
+
+	<div class="msg none animated bounceIn" id="prompt">
+		<div class="title">
+			系统提示
+			<a href="javascript:;" class="msg_close" id="prompt_close"></a>
+		</div>
+		<div class="msg_cont" id="prompt_txt"></div>
+		<a href="javascript:;" class="popup_msg_close" id="prompt_ok">我知道了</a>
+	</div>
+	<!-- } popup -->
+</body>
+</html>

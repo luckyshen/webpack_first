@@ -1,0 +1,676 @@
+@import './common.scss';
+
+
+body{
+	background: #96F8A4;
+	font-family: 'MFYueHei';
+}
+
+
+// close app
+.btn_close_app{
+	position: absolute;
+	top: rem-calc(23);
+	right: rem-calc(20);
+	width: rem-calc(29);
+	height: rem-calc(29);
+	@include bg('../../../../images/qiuqiu/ingameact/brl/btn_close.png');
+	@include nt();
+}
+
+// 抽奖
+.lottery{
+	margin: auto;
+	width: rem-calc(1000);
+	
+	// header
+	& .hd{
+		position: relative;
+		height: rem-calc(75);
+
+		& .btn_shop{
+			position: absolute;
+			left: 0;
+			top: rem-calc(10.5);
+			width: rem-calc(155);
+			height: rem-calc(54);
+			@include bg('../../../../images/qiuqiu/ingameact/brl/shop_logo.png');
+			@include nt();
+		}
+
+		& .title{
+			position: absolute;
+			left: 50%;
+			top: rem-calc(15);
+			margin-left: rem-calc(-120);
+			width: rem-calc(240);
+			height: rem-calc(45);
+			@include bg('../../../../images/qiuqiu/ingameact/brl/lottery_title.png');
+			@include nt();
+		}
+
+		& .mushroom_info{
+			position: absolute;
+			right: rem-calc(10);
+			top: rem-calc(17);
+			padding-left: rem-calc(8);
+			height: rem-calc(40);
+			border-radius: rem-calc(5);
+			background: rgba(0, 0, 0, 0.4);
+			& .num, & .icon{
+				display: inline-block;
+				vertical-align: middle;
+			}
+			& .num{
+				font-size: rem-calc(22);
+				color: #fff;
+			}
+			& .icon{
+				width: rem-calc(35);
+				height: rem-calc(35);
+				@include bg('../../../../images/qiuqiu/ingameact/brl/mushroom.png');
+			}
+		}
+	}
+
+	// lottery list
+	& .bd{
+		position: relative;
+		margin-top: rem-calc(5);
+		height: rem-calc(540);
+	
+		// item
+		& .item{
+			position: absolute;
+			width: rem-calc(202);	
+			height: rem-calc(137);
+			@include bg('../../../../images/qiuqiu/ingameact/brl/lottery_item.png');
+			// status
+			&.s2{
+				@include bg('../../../../images/qiuqiu/ingameact/brl/lottery_item_s2.png');
+				& .name{
+					color: #fff;
+					background: none;
+				}
+			}
+
+			// img
+			& .img{
+				position: absolute;
+				top: rem-calc(10);
+				left: rem-calc(8.5);
+				width: rem-calc(185);
+				height: rem-calc(85);
+				z-index: 2;
+				& img{
+					margin: auto;
+					display: block;
+					width: rem-calc(85);
+					height: rem-calc(85);
+				}
+			}
+
+			// name
+			& .name{
+				position: absolute;
+				left: rem-calc(11);
+				top: rem-calc(98);
+				width: rem-calc(180);
+				height: rem-calc(30);
+				line-height: rem-calc(30);
+				text-align: center;
+				font-size: rem-calc(22);
+				color: #677D55;
+				background: linear-gradient(left , rgba(255, 255, 255, 0) , rgba(255, 255, 255, 0.6) 100%);
+				background: -o-linear-gradient(left , rgba(255, 255, 255, 0) , rgba(255, 255, 255, 0.6) 100%);
+				background: -ms-linear-gradient(left , rgba(255, 255, 255, 0) , rgba(255, 255, 255, 0.6) 100%);
+				background: -moz-linear-gradient(left , rgba(255, 255, 255, 0) , rgba(255, 255, 255, 0.6) 100%);
+				background: -webkit-linear-gradient(left , rgba(255, 255, 255, 0) , rgba(255, 255, 255, 0.6) 100%);
+				z-index: 2;
+			}
+	
+			// position
+			&:nth-child(1){top: rem-calc(0);left: rem-calc(0);}
+			&:nth-child(2){top: rem-calc(0);left: rem-calc(198);}
+			&:nth-child(3){top: rem-calc(0);left: rem-calc(396);}
+			&:nth-child(4){top: rem-calc(0);left: rem-calc(594);}
+			&:nth-child(5){top: rem-calc(0);left: rem-calc(792);}
+			&:nth-child(6){top: rem-calc(133);left: rem-calc(792);}
+			&:nth-child(7){top: rem-calc(266);left: rem-calc(792);}
+			&:nth-child(8){top: rem-calc(399);left: rem-calc(792);}
+			&:nth-child(9){top: rem-calc(399);left: rem-calc(594);}
+			&:nth-child(10){top: rem-calc(399);left: rem-calc(396);}
+			&:nth-child(11){top: rem-calc(399);left: rem-calc(198);}
+			&:nth-child(12){top: rem-calc(399);left: rem-calc(0);}
+			&:nth-child(13){top: rem-calc(266);left: rem-calc(0);}
+			&:nth-child(14){top: rem-calc(133);left: rem-calc(0);}
+
+			// 效果
+			& .mask{
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				@include bg('../../../../images/qiuqiu/ingameact/brl/lottery_item_maskbg.png');
+				display: none;
+				z-index: 1;
+			}
+		}
+
+		// my info
+		& .myinfo{
+			position: absolute;
+			left: rem-calc(204);
+			top: rem-calc(136);
+			width: rem-calc(587);
+			height: rem-calc(264);
+			@include bg('../../../../images/qiuqiu/ingameact/brl/lottery_info.png');
+
+			& .prompt_title{
+				margin: rem-calc(45) auto auto;
+				width: rem-calc(480);
+				height: rem-calc(50);
+				line-height: rem-calc(50);
+				text-align: center;
+				font-style: italic;
+				font-size: rem-calc(36);
+				color: #FFD200;
+				-webkit-text-stroke: 1px #B5A832;
+				background: linear-gradient(left , rgba(255, 255, 255, 0) 1% , rgba(255, 255, 255, 0.4) 11% , rgba(255, 255, 255, 0.4) 85% , rgba(255, 255, 255, 0) 99%);
+				background: -o-linear-gradient(left , rgba(255, 255, 255, 0) 1% , rgba(255, 255, 255, 0.4) 11% , rgba(255, 255, 255, 0.4) 85% , rgba(255, 255, 255, 0) 99%);
+				background: -ms-linear-gradient(left , rgba(255, 255, 255, 0) 1% , rgba(255, 255, 255, 0.4) 11% , rgba(255, 255, 255, 0.4) 85% , rgba(255, 255, 255, 0) 99%);
+				background: -moz-linear-gradient(left , rgba(255, 255, 255, 0) 1% , rgba(255, 255, 255, 0.4) 11% , rgba(255, 255, 255, 0.4) 85% , rgba(255, 255, 255, 0) 99%);
+				background: -webkit-linear-gradient(left , rgba(255, 255, 255, 0) 1% , rgba(255, 255, 255, 0.4) 11% , rgba(255, 255, 255, 0.4) 85% , rgba(255, 255, 255, 0) 99%);
+				& em{color: #fff;-webkit-text-stroke: 1px #97BE7D;}
+			}
+			& .prompt_txt{
+				margin-top: rem-calc(10);
+				line-height: rem-calc(30);
+				text-align: center;
+				font-size: rem-calc(20);
+				color: #677D55;
+				& span{
+					color: #5AC700;
+					& em{}
+				}
+			}
+			& .btn_lottery{
+				display: block;
+				margin: rem-calc(10) auto auto;
+				width: rem-calc(246);
+				height: rem-calc(92);
+				text-decoration: none;
+				@include bg('../../../../images/qiuqiu/ingameact/brl/lottery_btn.png');
+				& .btn_txt, & .s{
+					display: block;
+					text-align: center;
+				}
+				& .btn_txt{
+					padding-top: rem-calc(12);
+					font-size: rem-calc(36);
+					color: #fff;
+				}
+				& .s{
+					padding-top: rem-calc(5);
+					font-size: rem-calc(24);
+					& .num, & .icon{
+						display: inline-block;
+						vertical-align: middle;
+					}
+					& .num{color: #fff;}
+					& .icon{
+						width: rem-calc(29);
+						height: rem-calc(29);
+						@include bg('../../../../images/qiuqiu/ingameact/brl/mushroom.png');
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// 碎片商城
+.maskbg{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 88;
+	background: rgba(0, 0, 0, 0.2);
+}
+.shop{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin: rem-calc(-285) 0 0 rem-calc(-556);
+	width: rem-calc(1112);
+	height: rem-calc(570);
+	background: #FBFFE8;
+	border-radius: rem-calc(5);
+	border: rem-calc(1) solid #E0E6C6;
+	z-index: 99;
+
+	& .hd{
+		position: relative;
+		height: rem-calc(50);
+		line-height: rem-calc(50);
+		& .title{
+			text-align: center;
+			font-size: rem-calc(34);
+			color: #677D55;
+		}
+		& .mychunks{
+			position: absolute;
+			right: rem-calc(65);
+			top: rem-calc(5);
+			padding-left: rem-calc(8);
+			height: rem-calc(40);
+			line-height: rem-calc(35);
+			border-radius: rem-calc(5);
+			background: rgba(0, 0, 0, 0.4);
+			& .num, & .icon{
+				display: inline-block;
+				vertical-align: middle;
+			}
+			& .num{
+				font-size: rem-calc(22);
+				color: #fff;
+			}
+			& .icon{
+				width: rem-calc(36);
+				height: rem-calc(37);
+				@include bg('../../../../images/qiuqiu/ingameact/brl/shop_logo_small.png');
+			}
+		}
+		& .btn_close{
+			position: absolute;
+			top: rem-calc(10);
+			right: rem-calc(20);
+			width: rem-calc(29);
+			height: rem-calc(29);
+			@include bg('../../../../images/qiuqiu/ingameact/brl/btn_close.png');
+			@include nt();
+		}
+	}
+
+	& .bd{
+		margin: rem-calc(6) auto auto;
+		width: rem-calc(1086);
+		height: rem-calc(500);
+		border: rem-calc(1) solid #D5DFBA;
+		border-radius: rem-calc(5);
+		background: #F3FED4;
+		overflow-y: auto;
+
+		& .shop_list{
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-moz-box-orient: horizontal;
+			-moz-box-direction: normal;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-webkit-box-pack: start;
+			-moz-box-pack: start;
+			-ms-flex-pack: start;
+			justify-content: flex-start;
+			& li{
+				margin: rem-calc(15) rem-calc(5);
+				width: rem-calc(261);
+				& .shop_item{
+					height: rem-calc(355);
+					&.bg1{
+						@include bg('../../../../images/qiuqiu/ingameact/brl/shop_item_bg1.png');
+						& .name{color: #666;}
+					}
+					&.bg2{
+						@include bg('../../../../images/qiuqiu/ingameact/brl/shop_item_bg2.png');
+						& .name{color: #425266;}
+					}
+					&.bg3{
+						@include bg('../../../../images/qiuqiu/ingameact/brl/shop_item_bg3.png');
+						& .name{color: #694082;}
+					}
+					&.bg4{
+						@include bg('../../../../images/qiuqiu/ingameact/brl/shop_item_bg4.png');
+						& .name{color: #894403;}
+					}
+					&.bg5{
+						@include bg('../../../../images/qiuqiu/ingameact/brl/shop_item_bg5.png');
+						& .name{color: #A8312A;}
+					}
+
+					& .name{
+						padding-top: rem-calc(10);
+						height: rem-calc(50);
+						line-height: rem-calc(50);
+						text-align: center;
+						font-size: rem-calc(24);
+						color: #7C4204;
+						@include ellipsis();
+					}
+					& .c_num{
+						margin: rem-calc(5) 0 0 rem-calc(72);
+						width: rem-calc(106);
+						height: rem-calc(46);
+						line-height: rem-calc(46);
+						font-size: rem-calc(16);
+						color: #fff;
+						@include bg('../../../../images/qiuqiu/ingameact/brl/shop_item_chunks.png');
+						& em{
+							margin-left: rem-calc(42);
+							display: inline-block;
+							width: rem-calc(54);
+							text-align: center;
+							@include ellipsis();
+						}
+					}
+					& .thumb{
+						margin: rem-calc(20) auto auto;
+						width: rem-calc(160);
+						height: rem-calc(160);
+						& img{
+							display: block;
+							width: 100%;
+							height: 100%;
+							border-radius: 50%;
+						}
+					}
+				}
+				& .btn_buy{
+					display: block;
+					margin: rem-calc(10) auto auto;
+					width: rem-calc(187);
+					height: rem-calc(57);
+					line-height: 150%;
+					text-align: center;
+					text-decoration: none;
+					@include bg('../../../../images/qiuqiu/ingameact/brl/btn_exchange.png');
+					& em, & .icon{
+						vertical-align: top;
+					}
+					& em{
+						margin-top: rem-calc(6);
+						display: inline-block;						
+						font-size: rem-calc(30);
+						color: #fff;
+					}
+					& .icon{
+						margin-top: rem-calc(13);
+						display: inline-block;
+						width: rem-calc(36);
+						height: rem-calc(37);
+						@include bg('../../../../images/qiuqiu/ingameact/brl/shop_logo_small.png');
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// award detail
+.award_detail{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin: rem-calc(-127) 0 0 rem-calc(-282);
+	width: rem-calc(565);
+	height: rem-calc(255);
+	border-radius: rem-calc(5);
+	border: 1px solid #E0E6C6;
+	background: #FBFFE8;
+	z-index: 99;
+
+	& .img{
+		float: left;
+		margin-left: rem-calc(10);
+		width: rem-calc(185);
+		& img{
+			margin: rem-calc(20) auto auto;
+			display: block;
+			width: rem-calc(140);
+			height: rem-calc(140);
+		}
+	}
+	& .detail{
+		float: left;
+		padding-top: rem-calc(25);
+		width: rem-calc(350);
+		color: #677D55;
+		& .name{
+			font-size: rem-calc(36);
+		}
+		& .cont{
+			margin-top: rem-calc(10);
+			font-size: rem-calc(20);
+			line-height: 120%;
+		}
+	}
+	& .remark{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: rem-calc(563);
+		height: rem-calc(75);
+		line-height: rem-calc(75);	
+		border: rem-calc(1) solid #D5DFBA;
+		border-radius: rem-calc(5);
+		background: #F3FED4;
+		color: #677D55;
+		text-indent: rem-calc(20);
+		font-size: rem-calc(22);
+		& em{color: #1A6805;}
+	}
+}
+
+.award_detail2{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin: rem-calc(-270) 0 0 rem-calc(-227.5);
+	width: rem-calc(455);
+	height: rem-calc(540);
+	border-radius: rem-calc(5);
+	border: 1px solid #E0E6C6;
+	background: #FBFFE8;
+	z-index: 99;
+	& .remark{
+		margin: auto;
+		width: 95%;
+		font-size: rem-calc(24);
+		color: #859C72;
+		height: rem-calc(40);
+		line-height: rem-calc(40);
+		text-align: center;
+		border-bottom: 1px solid #97B180;
+	}
+	& .img{
+		position: relative;
+		padding-top: rem-calc(50);
+		& img{
+			margin: auto;
+			display: block;
+			width: rem-calc(280);
+			height: rem-calc(280);
+		}
+		& .title, & .ico{
+			position: absolute;
+		}
+		& .title{
+			top: rem-calc(20);
+			right: rem-calc(20);
+			font-size: rem-calc(18);
+			color: #859C72;
+		}
+		& .ico{
+			right: rem-calc(20);
+			top: rem-calc(50);
+			width: rem-calc(106);
+			height: rem-calc(46);
+			line-height: rem-calc(46);
+			@include bg('../../../../images/qiuqiu/ingameact/brl/shop_item_chunks.png');
+			& .num{
+				margin-left: rem-calc(42);
+				display: block;
+				width: rem-calc(54);
+				height: rem-calc(46);
+				line-height: rem-calc(48);
+				text-align: center;
+				font-size: rem-calc(16);
+				color: #fff;
+				@include ellipsis();
+			}
+		}
+	}
+	& .name{
+		margin-top: rem-calc(10);
+		text-align: center;
+		font-size: rem-calc(48);
+		line-height: 150%;
+		color: #677D55;
+	}
+	& .cont{
+		margin: rem-calc(10) auto auto;
+		width: 95%;
+		text-align: center;
+		font-size: rem-calc(20);
+		line-height: 130%;
+		color: #859C72;
+	}
+}
+
+.award_success{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	@include bg('../../../../images/qiuqiu/ingameact/brl/success_bg.jpg');
+	& .s_title{
+		font-size: rem-calc(46);
+		color: #677D55;
+		height: rem-calc(100);
+		line-height: rem-calc(100);
+		text-align: center;
+	}
+	& .s_icon{
+		margin: rem-calc(30) auto auto;
+		position: relative;
+		width: rem-calc(337);
+		height: rem-calc(336);
+		@include bg('../../../../images/qiuqiu/ingameact/brl/success_icon.png');
+		& img{
+			position: absolute;
+			left: 50%;
+			top: rem-calc(50);
+			margin-left: rem-calc(-120);
+			width: rem-calc(240);
+			height: rem-calc(240);
+		}
+		& .name{
+			position: absolute;
+			left: rem-calc(-52);
+			top: rem-calc(255);
+			width: rem-calc(441);
+			height: rem-calc(89);
+			line-height: rem-calc(89);
+			text-align: center;
+			font-size: rem-calc(35);
+			color: #677D55;
+			@include bg('../../../../images/qiuqiu/ingameact/brl/success_icon_name.png');
+		}
+	}
+	& .s_note_txt{
+		margin: rem-calc(30) auto auto;
+		width: 100%;
+		font-size: rem-calc(24);
+		line-height: rem-calc(50);
+		text-align: center;
+	}
+}
+
+
+.msg{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin: rem-calc(-175) 0 0 rem-calc(-310);
+	width: rem-calc(620);
+	height: rem-calc(350);
+	border-radius: rem-calc(5);
+	border: 1px solid #E0E6C6;
+	background: #FBFFE8;
+	z-index: 999;
+	& .title{
+		position: relative;
+		font-size: rem-calc(34);
+		height: rem-calc(50);
+		line-height: rem-calc(50);
+		text-align: center;
+		& .msg_close{
+			position: absolute;
+			right: rem-calc(20);
+			top: rem-calc(10);
+			width: rem-calc(29);
+			height: rem-calc(29);
+			@include bg('../../../../images/qiuqiu/ingameact/brl/btn_close.png');
+			@include nt();
+		}
+	}
+	& .msg_cont{
+		margin: rem-calc(20) auto auto;
+		padding-top: rem-calc(30);
+		width: rem-calc(580);
+		height: rem-calc(150);
+		line-height: rem-calc(30);
+		text-align: center;
+		font-size: rem-calc(22);
+		color: #6B8058;
+		border: rem-calc(1) solid #CFDAB8;
+		background: #F3FED4;
+		border-radius: rem-calc(5);
+	}
+	& .popup_msg_close{
+		display: block;
+		margin: rem-calc(20) auto auto;
+		width: rem-calc(187);
+		height: rem-calc(57);
+		line-height: rem-calc(57);
+		text-align: center;
+		text-decoration: none;
+		font-size: rem-calc(20);
+		color: #fff;
+		@include bg('../../../../images/qiuqiu/ingameact/brl/btn_exchange.png');
+	}
+}
+
+.pNum{
+	// font-family: "Microsoft YaHei";
+	font-family: "微软雅黑";
+	font-weight: bold;
+	position: absolute;
+	font-size: rem-calc(32);
+	left:rem-calc(110);
+	top:rem-calc(60);
+	z-index:9;
+	color:#677d55;
+	background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(255, 235, 143, 1)), to(rgba(255, 210, 43, 1)));
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+	 -webkit-text-stroke: .5px #b37320;
+}
+.getNum{
+	// font-family: "Microsoft YaHei";
+	font-weight: bold;
+	position: absolute;
+}
